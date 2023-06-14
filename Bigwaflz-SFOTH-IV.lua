@@ -1,7 +1,7 @@
 
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-local win = DiscordLib:Window("Bigwaflz's SFOTH Hub")
+local win = DiscordLib:Window("Bigwaflz's SFOTH Hub", "http://www.roblox.com/asset/?id=7037932063")
 
 local serv = win:Server("Main", "")
 
