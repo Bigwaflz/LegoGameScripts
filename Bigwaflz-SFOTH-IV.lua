@@ -53,10 +53,10 @@ end)
   
 ---MISC/FUN---
 local misc = serv:Channel("Misc/Fun")
-misc:Slider("WalkSpeed", 16, 200, 16, function(v) -- 500 (MaxValue) | 0 (MinValue)
+misc:Slider("WalkSpeed", 16, 200, 16, function(v)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
-misc:Slider("Jump Power", 16, 200, 50, function(v) -- 500 (MaxValue) | 0 (MinValue)
+misc:Slider("Jump Power", 16, 200, 50, function(v)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 end)
 misc:Button("ESP", function()
