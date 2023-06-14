@@ -854,5 +854,5 @@ end)
 
 ---NOTES---
 local notes = serv:Channel("Notes")
-notes:Label("Made by Bigwaflz")
+notes:Label("Made by Bigwaflz#3281")
 notes:Label("UI made by dawid#7205/dawid-scripts on github")
