@@ -56,7 +56,7 @@ local misc = serv:Channel("Misc/Fun")
 misc:Slider("WalkSpeed", 16, 200, 16, function(v)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
-misc:Slider("Jump Power", 16, 200, 50, function(v)
+misc:Slider("JumpPower", 16, 200, 50, function(v)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 end)
 misc:Button("ESP", function()
@@ -420,6 +420,25 @@ end)
 misc:Button("Infyield", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
+misc:Seperator()
+misc:Label("WARNING: In order to use the hitbox you will have to turn on noclip, and also have to re-enable after everyone dies")
+misc:Label("Credit goes to walidhook on v3rmillion and whoever helped him")
+misc:Button("Huge hitbox", function()
+    for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(6000, 6000, 6000)
+v.Character.HumanoidRootPart.Transparency = 0.6
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Gray")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end)
+misc:Seperator()
+misc:Label("Fun Stuff")
+
 misc:Button("Ball", function()
     local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
