@@ -421,8 +421,9 @@ misc:Button("Infyield", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
 misc:Seperator()
-misc:Label("WARNING: In order to use the hitbox you will have to turn on noclip, and also have to re-enable after everyone dies")
-misc:Label("Credit goes to walidhook on v3rmillion and whoever helped him")
+misc:Label("WARNING: In order to use the hitbox you will have to turn on")
+misc:Label("noclip, and also have to re-enable after everyone dies")
+misc:Label("Credit goes to walidhook on v3rmillion and whoever helped")
 misc:Button("Huge hitbox", function()
     for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
