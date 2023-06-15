@@ -51,8 +51,8 @@ swords:Button("IceDagger", function()
 end)
 
   
----MISC/FUN---
-local misc = serv:Channel("Misc/Fun")
+---MISC---
+local misc = serv:Channel("Misc")
 misc:Slider("WalkSpeed", 16, 200, 16, function(v)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
