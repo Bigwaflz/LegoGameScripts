@@ -421,19 +421,36 @@ misc:Button("Infyield", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
 misc:Seperator()
-misc:Label("WARNING: In order to use the hitbox you will have to turn on")
-misc:Label("noclip, and also have to re-enable after everyone dies")
-misc:Label("Credit goes to walidhook on v3rmillion and whoever helped")
-misc:Button("Huge hitbox", function()
-    for i,v in next, game:GetService('Players'):GetPlayers() do
+misc:Label("Before using the hitbox turn on noclip")
+misc:Label("To turn this off you need to rejoin")
+misc:Label("Credit goes to walidhook and Denx on v3rmillion")
+misc:Button("Noclip", function()
+---noclip---
+local character = game.Players.LocalPlayer.Character
+while true do
+for i,v in pairs(character:GetDescendants()) do
+pcall(function()
+if v:IsA("BasePart") then
+v.CanCollide = false
+end
+end)
+end
+task.wait()
+end
+end)
+misc:Button("Hitbox/Loopkill", function()
+---hitbox---
+while wait() do
+for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 pcall(function()
 v.Character.HumanoidRootPart.Size = Vector3.new(6000, 6000, 6000)
-v.Character.HumanoidRootPart.Transparency = 0.6
+v.Character.HumanoidRootPart.Transparency = 1
 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Gray")
-v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.Material = "Plastic"
 v.Character.HumanoidRootPart.CanCollide = false
 end)
+end
 end
 end
 end)
